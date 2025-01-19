@@ -7,7 +7,7 @@ license = "MIT"
 description = "A library for managing and identifying livestock breeds."
 repository = "https://github.com/rowan-ranch/livestock-rs"
 keywords = ["livestock", "farming", "ranching", "agriculture", "agritech"]
-categories = ["data", "agriculture"]
+categories = ["data-structures"]
 readme = "README.md"
 publish = true
 
