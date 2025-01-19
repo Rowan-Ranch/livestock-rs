@@ -299,8 +299,8 @@ impl ToString for CattleBreed {
     /// ```
     fn to_string(&self) -> String {
         match self {
-            CattleBreed::AnkoleWatusi => "Anokole-Watusi".to_string(),
-            CattleBreed:AulieAta => "Aulie-Ata".to_string(),
+            CattleBreed::AnkoleWatusi => "Ankole-Watusi".to_string(),
+            CattleBreed::AulieAta => "Aulie-Ata".to_string(),
             CattleBreed::Bearnais => "Béarnais".to_string(),
             CattleBreed::BlancaCacerena => "Blanca Cacereña/White Cáceres".to_string(),
             CattleBreed::BlondeDAquitaine => "Blonde d'Aquitaine".to_string(),
@@ -498,7 +498,7 @@ impl FromStr for CattleBreed {
             "krishna valley" => Ok(CattleBreed::KrishnaValley),
             "kurdi black" => Ok(CattleBreed::KurdiBlack),
             "kuri" => Ok(CattleBreed::Kuri),
-            "latvian brown" | "buraya latviiskaya" | "latvia brown (buraya latviiskaya)" => Ok(CattleBreed::LatvianBrown),
+            "latvian brown" | "buraya latviiskaya" | "latvian brown (buraya latviiskaya)" => Ok(CattleBreed::LatvianBrown),
             "limousin" => Ok(CattleBreed::Limousin),
             "limpurger" => Ok(CattleBreed::Limpurger),
             "lincoln red" => Ok(CattleBreed::LincolnRed),
@@ -578,7 +578,7 @@ impl FromStr for CattleBreed {
             "shetland" => Ok(CattleBreed::Shetland),
             "shorthorn" => Ok(CattleBreed::Shorthorn),
             "siboney" => Ok(CattleBreed::Siboney),
-            "simbra" => Ok(CattleBreed::Simbra),
+            "simbra" | "simbrah" => Ok(CattleBreed::Simbrah),
             "simmental" => Ok(CattleBreed::Simmental),
             "siri" => Ok(CattleBreed::Siri),
             "slovenian cika" => Ok(CattleBreed::SlovenianCika),
@@ -616,11 +616,27 @@ impl FromStr for CattleBreed {
 #[cfg(test)]
 mod tests {
     use super::*;
-
     #[test]
-    fn test_to_string() {
+    fn test_to_string_special_cases() {
         let breeds = [
-            (CattleBreed::Angus, "Angus"),
+            (CattleBreed::AnkoleWatusi, "Ankole-Watusi"),
+            (CattleBreed::AulieAta, "Aulie-Ata"),
+            (CattleBreed::Bearnais, "Béarnais"),
+            (CattleBreed::BlancaCacerena, "Blanca Cacereña/White Cáceres"),
+            (CattleBreed::BlondeDAquitaine, "Blonde d'Aquitaine"),
+            (CattleBreed::ChineseBlackAndWhite, "Chinese Black-and-White"),
+            (CattleBreed::CostenoConCuernos, "Costeño con Cuernos"),
+            (CattleBreed::DutchBelted, "Dutch Belted (Lakenvelder)"),
+            (CattleBreed::HolandoArgentino, "Holando-Argentino"),
+            (CattleBreed::IndoBrazilian, "Indo-Brazilian"),
+            (CattleBreed::LatvianBrown, "Latvian Brown (Buraya Latviiskaya)"),
+            (CattleBreed::MaineAnjou, "Maine-Anjou"),
+            (CattleBreed::MeuseRhineYssel, "Meuse-Rhine-Yssel"),
+            (CattleBreed::Montbeliard, "Montbéliarde"),
+            (CattleBreed::Muturu, "Muturu - West African Dwarf Shorthorn"),
+            (CattleBreed::Ndama, "N'dama"),
+            (CattleBreed::RedPolledOstland, "Red Polled Østland"),
+            (CattleBreed::SwedishRedAndWhite, "Swedish Red-and-White"),
         ];
 
         for (breed, expected) in breeds.iter() {
@@ -629,10 +645,26 @@ mod tests {
     }
 
     #[test]
-    fn test_from_str() {
+    fn test_from_str_special_cases() {
         let breeds = [
-            ("angus", CattleBreed::Angus),
-            ("Angus", CattleBreed::Angus),
+            ("Ankole-Watusi", CattleBreed::AnkoleWatusi),
+            ("Aulie-Ata", CattleBreed::AulieAta),
+            ("Béarnais", CattleBreed::Bearnais),
+            ("Blanca Cacereña/White Cáceres", CattleBreed::BlancaCacerena),
+            ("Blonde d'Aquitaine", CattleBreed::BlondeDAquitaine),
+            ("Chinese Black-and-White", CattleBreed::ChineseBlackAndWhite),
+            ("Costeño con Cuernos", CattleBreed::CostenoConCuernos),
+            ("Dutch Belted (Lakenvelder)", CattleBreed::DutchBelted),
+            ("Holando-Argentino", CattleBreed::HolandoArgentino),
+            ("Indo-Brazilian", CattleBreed::IndoBrazilian),
+            ("Latvian Brown (Buraya Latviiskaya)", CattleBreed::LatvianBrown),
+            ("Maine-Anjou", CattleBreed::MaineAnjou),
+            ("Meuse-Rhine-Yssel", CattleBreed::MeuseRhineYssel),
+            ("Montbéliard", CattleBreed::Montbeliard),
+            ("Muturu - West African Dwarf Shorthorn", CattleBreed::Muturu),
+            ("N'dama", CattleBreed::Ndama),
+            ("Red Polled Østland", CattleBreed::RedPolledOstland),
+            ("Swedish Red-and-White", CattleBreed::SwedishRedAndWhite),
         ];
 
         for (breed, expected) in breeds.iter() {
