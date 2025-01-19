@@ -8,6 +8,7 @@ Features
  - 🌱 Support for over 320+ livestock breeds, categorized by species.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
+ - 🦌 Includes common reindeer breeds like Even and Nentsi.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
 
@@ -40,6 +41,9 @@ println!("{:?}", breed); // prints "Canindé"
 ## Sheep Breeds
 - Features a wide variety of sheep breeds including popular types like Dorper, Romney, and Merino.
 - Regional and specialty breeds such as the Icelandic, Navajo Churro, and Valais Blacknose.
+
+## Reindeer Breeds
+ - Features common reindeer breeds including Chukotka, Even, Evenk, and Nentsi.
 
 ## Roadmap
  - 🗂️ Expand support for other livestock species (e.g., cattle, pigs).
