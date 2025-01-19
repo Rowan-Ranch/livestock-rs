@@ -336,8 +336,35 @@ impl ToString for CattleBreed {
 impl FromStr for CattleBreed {
     type Err = std::io::Error;
     fn from_str(s: &str) -> Result<Self, Self::Err> {
-        match s.to_lowercase().as_str() {
+        match s.to_lowercase().replace("-", " ").as_str() {
+            "africander" => Ok(CattleBreed::Africander),
+            "akaushi" => Ok(CattleBreed::Akaushi),
+            "alberes" => Ok(CattleBreed::Alberes),
+            "alentejana" => Ok(CattleBreed::Alentejana),
+            "allmogekor" => Ok(CattleBreed::Allmogekor),
+            "american breed" | "american" => Ok(CattleBreed::AmericanBreed),
+            "american braford" => Ok(CattleBreed::AmericanBraford),
+            "american whitepark" | "american white park" => Ok(CattleBreed::AmericanWhitePark),
+            "amerifax" => Ok(CattleBreed::Amerifax),
+            "amrit mahal" => Ok(CattleBreed::AmritMahal),
+            "anatolian black" => Ok(CattleBreed::AnatolianBlack),
+            "andalusian black" => Ok(CattleBreed::AndalusianBlack),
+            "andalusian grey" => Ok(CattleBreed::AndalusianGrey),
+            "angeln" => Ok(CattleBreed::Angeln),
             "angus" => Ok(CattleBreed::Angus),
+            "ankole" => Ok(CattleBreed::Ankole),
+            "ankole watusi" => Ok(CattleBreed::AnkoleWatusi),
+            "argentine criollo" => Ok(CattleBreed::ArgentineCriollo),
+            "asturian mountain" => Ok(CattleBreed::AsturianMountain),
+            "asturian valley" => Ok(CattleBreed::AsturianValley),
+            "aubrac" => Ok(CattleBreed::Aubrac),
+            "aulie ata" => Ok(CattleBreed::AulieAta),
+            "australian braford" => Ok(CattleBreed::AustralianBraford),
+            "australian friesian sahiwal" => Ok(CattleBreed::AustralianFriesianSahiwal),
+            "australian lowline" => Ok(CattleBreed::AustralianLowline),
+            "australian milking zebu" => Ok(CattleBreed::AustralianMilkingZebu),
+            "ayrshire" => Ok(CattleBreed::Ayrshire),
+            "azaouak" => Ok(CattleBreed::Azaouak),
             _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid cattle breed")),
         }
     }
