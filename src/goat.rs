@@ -8,7 +8,7 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock::goat::GoatBreed;
+/// use livestock_rs::goat::GoatBreed;
 ///
 /// let breed = GoatBreed::Alpine;
 /// println!("{:?}", breed);
@@ -105,8 +105,8 @@ impl ToString for GoatBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock::goat::GoatBreed;
-    /// 
+    /// use livestock_rs::goat::GoatBreed;
+    ///
     /// let alpine = GoatBreed::Alpine;
     /// println!("{}", alpine.to_string());
     ///
@@ -128,9 +128,9 @@ impl ToString for GoatBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock::goat::GoatBreed;
+/// use livestock_rs::goat::GoatBreed;
 /// use std::str::FromStr;
-/// 
+///
 /// let breed = GoatBreed::from_str("Alpine").unwrap();
 /// println!("{:?}", breed);
 ///
