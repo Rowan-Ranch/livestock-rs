@@ -6,13 +6,14 @@ authors = ["Jaken Herman <jaken@rowanranch.com>"]
 license = "MIT"
 description = "A library for managing and identifying livestock breeds."
 repository = "https://github.com/rowan-ranch/livestock-rs"
-keywords = ["livestock", "cattle", "goats", "breeds", "farming", "ranching", "sheep", "swine", "poultry", "horses", "equine"]
+keywords = ["livestock", "farming", "ranching", "agriculture", "agritech"]
 categories = ["data", "agriculture"]
 readme = "README.md"
 publish = true
 
 [dependencies]
 Inflector = "0.11.4"
+serde = { version = "1.0.217", features=["derive"] }
 
 [badges]
 github-actions = { repository = "rowan-ranch/livestock-rs", status = "main" }
