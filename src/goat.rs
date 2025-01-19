@@ -1,4 +1,5 @@
 use inflector::Inflector;
+use serde::{Deserialize, Serialize};
 use std::str::FromStr;
 
 /// An enum representing the different breeds of goats.
@@ -12,7 +13,7 @@ use std::str::FromStr;
 /// let breed = GoatBreed::Alpine;
 /// println!("{:?}", breed);
 /// ```
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, Deserialize, Eq, PartialEq, Serialize)]
 pub enum GoatBreed {
     Alpine,
     AltaiMountain,

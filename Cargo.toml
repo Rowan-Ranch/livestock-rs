@@ -13,6 +13,7 @@ publish = true
 
 [dependencies]
 Inflector = "0.11.4"
+serde = { version = "1.0.217", features=["derive"] }
 
 [badges]
 github-actions = { repository = "rowan-ranch/livestock-rs", status = "main" }
