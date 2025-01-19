@@ -1,5 +1,7 @@
 # livestock-rs
 
+![crates.io](https://img.shields.io/crates/v/livestock-rs.svg)
+
 A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
