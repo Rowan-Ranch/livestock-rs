@@ -1,0 +1,27 @@
+[package]
+name = "livestock-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jaken Herman <jaken@rowanranch.com>"]
+license = "MIT"
+description = "A library for managing and identifying livestock breeds."
+repository = "https://github.com/rowan-ranch/livestock-rs"
+keywords = ["livestock", "cattle", "goats", "breeds", "farming", "ranching", "sheep", "swine", "poultry", "horses", "equine"]
+categories = ["data", "agriculture"]
+readme = "README.md"
+publish = true
+
+[dependencies]
+Inflector = "0.11.4"
+
+[badges]
+github-actions = { repository = "rowan-ranch/livestock-rs", status = "main" }
+crates-io = { text = "livestock-rs", url = "https://crates.io/crates/livestock_rs" }
+
+[package.metadata]
+company = { name = "Rowan Ranch Pasture & Pen, LLC", url = "https://rowanranch.com", email = "jaken@rowanranch.com" }
+project_team = ["Jaken Herman", "Brooklyn Herman"]
+support = { issue_tracker = "https://github.com/rowan-ranch/livestock-rs/issues" }
+
+[lib]
+crate-type = ["lib"]
