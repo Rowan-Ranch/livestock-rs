@@ -1,4 +1,5 @@
 use inflector::Inflector;
+use serde::{Deserialize, Serialize};
 use std::str::FromStr;
 
 /// An enum representing the different breeds of goats.
@@ -7,12 +8,12 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock::goat::GoatBreed;
+/// use livestock_rs::goat::GoatBreed;
 ///
 /// let breed = GoatBreed::Alpine;
 /// println!("{:?}", breed);
 /// ```
-#[derive(Debug, Eq, PartialEq)]
+#[derive(Debug, Deserialize, Eq, PartialEq, Serialize)]
 pub enum GoatBreed {
     Alpine,
     AltaiMountain,
@@ -104,8 +105,8 @@ impl ToString for GoatBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock::goat::GoatBreed;
-    /// 
+    /// use livestock_rs::goat::GoatBreed;
+    ///
     /// let alpine = GoatBreed::Alpine;
     /// println!("{}", alpine.to_string());
     ///
@@ -127,9 +128,9 @@ impl ToString for GoatBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock::goat::GoatBreed;
+/// use livestock_rs::goat::GoatBreed;
 /// use std::str::FromStr;
-/// 
+///
 /// let breed = GoatBreed::from_str("Alpine").unwrap();
 /// println!("{:?}", breed);
 ///
