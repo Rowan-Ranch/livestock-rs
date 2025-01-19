@@ -9,6 +9,7 @@ Features
  - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
+ - 🫏 Includes common donkey breeds like Miniature and Standard.
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
@@ -46,6 +47,9 @@ println!("{:?}", breed); // prints "Canindé"
 ## Sheep Breeds
 - Features a wide variety of sheep breeds including popular types like Dorper, Romney, and Merino.
 - Regional and specialty breeds such as the Icelandic, Navajo Churro, and Valais Blacknose.
+
+## Donkey Breeds
+- Features common donkey breeds including Standard, Large Standard, Miniature, Mary, Mammoth Jack Stock, and more.
 
 ## Reindeer Breeds
  - Features common reindeer breeds including Chukotka, Even, Evenk, and Nentsi.
