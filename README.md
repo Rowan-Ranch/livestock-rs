@@ -5,7 +5,8 @@
 A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
- - 🌱 Support for over 320+ livestock breeds, categorized by species.
+ - 🌱 Support for over 500+ livestock breeds, categorized by species.
+ - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
@@ -34,6 +35,10 @@ let breed = GoatBreed::Caninde;
 println!("{:?}", breed); // prints "Canindé"
 ```
 
+## Cattle Breeds
+ - Covers all major cattle breeds like Angus, Brahman, Jersey, and more.
+ - Regional specialties, including Texas Longhorn, Deoni, and more.
+
 ## Goat Breeds
  - Covers all major goat breeds like Boer, Alpine, Nigerian Dwarf, and more.
  - Regional specialties, including Kalahari Red, Damascus, and Golden Guernsey.
@@ -46,7 +51,7 @@ println!("{:?}", breed); // prints "Canindé"
  - Features common reindeer breeds including Chukotka, Even, Evenk, and Nentsi.
 
 ## Roadmap
- - 🗂️ Expand support for other livestock species (e.g., cattle, pigs).
+ - 🗂️ Expand support for other livestock species (e.g., chickens, ducks, pigs).
  - 🌍 Localization support for breed names in multiple languages.
  - 📊 Add more utilities for livestock data management.
 
