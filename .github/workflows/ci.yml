@@ -1,6 +1,7 @@
 name: Rust CI and Publish
 
 on:
+  workflow_dispatch:
   pull_request:
     branches:
       - main
@@ -11,7 +12,7 @@ on:
       - 'Cargo.lock'
   push:
     branches:
-      - main  # Trigger on push to main branch
+      - main
     paths:
       - '**/*.rs'
       - 'Cargo.toml'
