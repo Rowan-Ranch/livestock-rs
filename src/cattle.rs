@@ -298,7 +298,15 @@ impl ToString for CattleBreed {
     /// ```
     fn to_string(&self) -> String {
         match self {
-            CattleBreed::Angus => "Angus".to_string(),
+            CattleBreed::AnkoleWatusi => "Anokole-Watusi".to_string(),
+            CattleBreed:AulieAta => "Aulie-Ata".to_string(),
+            CattleBreed::Bearnais => "Béarnais".to_string(),
+            CattleBreed::BlancaCacerena => "Blanca Cacereña/White Cáceres".to_string(),
+            CattleBreed::BlondeDAquitaine => "Blonde d'Aquitaine".to_string(),
+            CattleBreed::ChineseBlackAndWhite => "Chinese Black-and-White".to_string(),
+            CattleBreed::CostenoConCuernos => "Costeño con Cuernos".to_string(),
+            CattleBreed::DutchBelted => "Dutch Belted (Lakenvelder)".to_string(),
+            _ => format!("{:?}", self),
         }
     }
 }
