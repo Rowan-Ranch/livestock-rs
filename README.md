@@ -1,2 +1,57 @@
 # livestock-rs
 
+A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
+
+Features
+ - 🌱 Support for over 80+ livestock breeds, categorized by species.
+ - 🐐 Includes common goat breeds like Alpine and Boer.
+ - 🛠️ Utilities for converting between enum variants and human-readable strings.
+ - 🔒 Serde support for serialization and deserialization.
+
+## Getting Started
+Add the crate to your `Cargo.toml`:
+
+```
+[dependencies]
+livestock_rs = "0.1.0"
+```
+
+or 
+
+```
+cargo add livestock-rs
+```
+
+## Usage Example
+``` rust
+use livestock_rs::GoatBreed;
+
+let breed = GoatBreed::Caninde;
+println!("{:?}", breed); // prints "Canindé"
+```
+
+## Goat Breeds
+ - Covers all major goat breeds like Boer, Alpine, Nigerian Dwarf, and more.
+ - Regional specialties, including Kalahari Red, Damascus, and Golden Guernsey.
+
+## Roadmap
+ - 🗂️ Expand support for other livestock species (e.g., sheep, pigs).
+ - 🌍 Localization support for breed names in multiple languages.
+ - 📊 Add more utilities for livestock data management.
+
+## Contributing
+We welcome contributions! If you’d like to add more breeds or improve the library, please follow these steps:
+1.	Fork the repository.
+2.	Create a new branch for your feature: git checkout -b feature-name.
+3.	Commit your changes: git commit -m "Add feature-name".
+4.	Push your branch and create a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## About Us
+This crate is maintained by Rowan Ranch Pasture & Pen, LLC, a small-scale regenerative family farm focusing on expanding agricultural technology solutions. We strive to build software that empowers farmers, researchers, and agricultural businesses.
+
+## Acknowledgments
+ - Thanks to the global farming community for inspiration.
+ - Inspired by real-world agricultural needs and breed registries.
