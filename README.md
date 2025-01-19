@@ -5,8 +5,9 @@
 A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
- - 🌱 Support for over 80+ livestock breeds, categorized by species.
+ - 🌱 Support for over 320+ livestock breeds, categorized by species.
  - 🐐 Includes common goat breeds like Alpine and Boer.
+ - 🐑 Includes common sheep breeds like Dorper and St. Croix.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
 
@@ -36,8 +37,12 @@ println!("{:?}", breed); // prints "Canindé"
  - Covers all major goat breeds like Boer, Alpine, Nigerian Dwarf, and more.
  - Regional specialties, including Kalahari Red, Damascus, and Golden Guernsey.
 
+## Sheep Breeds
+- Features a wide variety of sheep breeds including popular types like Dorper, Romney, and Merino.
+- Regional and specialty breeds such as the Icelandic, Navajo Churro, and Valais Blacknose.
+
 ## Roadmap
- - 🗂️ Expand support for other livestock species (e.g., sheep, pigs).
+ - 🗂️ Expand support for other livestock species (e.g., cattle, pigs).
  - 🌍 Localization support for breed names in multiple languages.
  - 📊 Add more utilities for livestock data management.
 
