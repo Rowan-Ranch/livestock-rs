@@ -20,7 +20,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.6.0"
+livestock_rs = "0.6.1"
 ```
 
 or 
