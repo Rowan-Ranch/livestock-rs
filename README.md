@@ -5,10 +5,11 @@
 A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
- - 🌱 Support for over 500+ livestock breeds, categorized by species.
+ - 🌱 Support for over 600+ livestock breeds, categorized by species.
  - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
+ - 🐖 Includes common swine breeds like Duroc and Hampshire.
  - 🫏 Includes common donkey breeds like Miniature and Standard.
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
@@ -19,7 +20,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.1.0"
+livestock_rs = "0.6.0"
 ```
 
 or 
@@ -47,6 +48,10 @@ println!("{:?}", breed); // prints "Canindé"
 ## Sheep Breeds
 - Features a wide variety of sheep breeds including popular types like Dorper, Romney, and Merino.
 - Regional and specialty breeds such as the Icelandic, Navajo Churro, and Valais Blacknose.
+
+## Swine Breeds
+- Features a wide variey of swine breeds including popular types like Duroc, KuneKune, Hampshire, and more.
+- Regional specialties, including Oxford Sandy & Black, Ba Xuyen, and Arapawa Island.
 
 ## Donkey Breeds
 - Features common donkey breeds including Standard, Large Standard, Miniature, Mary, Mammoth Jack Stock, and more.
