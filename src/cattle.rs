@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
+use inflector::Inflector;
 
 /// An enum representing the different breeds of cattle.
 ///
@@ -317,7 +318,7 @@ impl ToString for CattleBreed {
             CattleBreed::Ndama => "N'dama".to_string(),
             CattleBreed::RedPolledOstland => "Red Polled Østland".to_string(),
             CattleBreed::SwedishRedAndWhite => "Swedish Red-and-White".to_string(),
-            _ => format!("{:?}", self),
+            _ => format!("{:?}", self).to_title_case(),
         }
     }
 }
