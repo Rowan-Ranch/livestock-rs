@@ -23,7 +23,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.9.1"
+livestock_rs = "0.9.2"
 ```
 
 or 
