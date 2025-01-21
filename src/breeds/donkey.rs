@@ -8,7 +8,7 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::donkey::DonkeyBreed;
+/// use livestock_rs::breeds::donkey::DonkeyBreed;
 ///
 /// let breed = DonkeyBreed::Abyssinian;
 /// println!("{:?}", breed);
@@ -30,7 +30,7 @@ impl ToString for DonkeyBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock_rs::donkey::DonkeyBreed;
+    /// use livestock_rs::breeds::donkey::DonkeyBreed;
     ///
     /// let evenk = DonkeyBreed::Standard;
     /// println!("{}", evenk.to_string());
@@ -44,7 +44,7 @@ impl ToString for DonkeyBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::donkey::DonkeyBreed;
+/// use livestock_rs::breeds::donkey::DonkeyBreed;
 /// use std::str::FromStr;
 ///
 /// let breed = DonkeyBreed::from_str("standard").unwrap();

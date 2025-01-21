@@ -8,7 +8,7 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::horse::HorseBreed;
+/// use livestock_rs::breeds::horse::HorseBreed;
 ///
 /// let breed = HorseBreed::Racking;
 /// println!("{:?}", breed);
@@ -239,7 +239,7 @@ impl ToString for HorseBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock_rs::horse::HorseBreed;
+    /// use livestock_rs::breeds::horse::HorseBreed;
     ///
     /// let racking = HorseBreed::Racking;
     /// println!("{}", racking.to_string());
@@ -269,7 +269,7 @@ impl ToString for HorseBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::horse::HorseBreed;
+/// use livestock_rs::breeds::horse::HorseBreed;
 /// use std::str::FromStr;
 ///
 /// let breed = HorseBreed::from_str("racking").unwrap();

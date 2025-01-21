@@ -23,7 +23,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.9.1"
+livestock_rs = "0.9.2"
 ```
 
 or 
@@ -34,7 +34,7 @@ cargo add livestock-rs
 
 ## Usage Example
 ``` rust
-use livestock_rs::GoatBreed;
+use livestock_rs::breeds::GoatBreed;
 
 let breed = GoatBreed::Caninde;
 println!("{:?}", breed); // prints "Canindé"
