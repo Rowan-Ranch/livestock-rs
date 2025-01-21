@@ -24,7 +24,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.11.0"
+livestock_rs = "0.12.0"
 ```
 
 or 
@@ -44,10 +44,19 @@ For CLI, use
 stocktools adg -i 100 -f 150 -d 50
 ```
 
-## FCR Usage Example
+## FCR & Feed Efficiency Rating Usage Example
 ``` rust
 use livestock_rs::calculators::feed::fcr::calculate_fcr;
-let fcr = calculate_fcr(100.0, 300.0);
+use livestock_rs::calculators::feed::efficiency::{calculate_feed_efficiency, FeedEfficiency, FeedEfficiencyRating};
+use livestock_rs::types::LivestockType;
+
+let fcr = calculate_fcr(100.0, 30.0); // FCR = 3.33
+let feed_efficiency = calculate_feed_efficiency(fcr, LivestockType::Swine)?; // Swine should be from 3.0 - 3.9
+
+// feed_efficiency.rating = FeedEfficiencyRating::Average
+// feed_efficiency.fcr = 3.33
+// feed_efficiency.min_fcr = 3.0
+// feed_efficiency.max_fcr = 3.9
 ```
 
 For CLI, use
