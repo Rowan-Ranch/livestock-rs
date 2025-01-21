@@ -12,6 +12,7 @@ use anyhow::{ensure, Result};
 ///
 /// # Example
 /// ```
+/// use livestock_rs::calculators::growth::adg::calculate_adg;
 /// let adg = calculate_adg(100.0, 150.0, 50);
 /// assert_eq!(adg, 1.0); // 1 kg or lb per day
 /// ```
