@@ -1,3 +1,4 @@
+use inflector::Inflector;
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
 
@@ -98,79 +99,7 @@ impl ToString for ChickenBreed {
     /// println!("{}", orp.to_string());
     /// ```
     fn to_string(&self) -> String {
-        match self {
-            ChickenBreed::AC => "AC".to_string(),
-            ChickenBreed::Ameraucana => "Ameraucana".to_string(),
-            ChickenBreed::Ancona => "Ancona".to_string(),
-            ChickenBreed::Andalusian => "Andalusian".to_string(),
-            ChickenBreed::AppenzellBeardedHen => "Appenzell Bearded Hen".to_string(),
-            ChickenBreed::AppenzellPointedHoodHen => "Appenzell Pointed Hood Hen".to_string(),
-            ChickenBreed::Araucana => "Araucana".to_string(),
-            ChickenBreed::Aseel => "Aseel".to_string(),
-            ChickenBreed::Australorp => "Australorp".to_string(),
-            ChickenBreed::Baheij => "Baheij".to_string(),
-            ChickenBreed::Bandara => "Bandara".to_string(),
-            ChickenBreed::Barnevelders => "Barnevelders".to_string(),
-            ChickenBreed::Brahma => "Brahma".to_string(),
-            ChickenBreed::Buckeye => "Buckeye".to_string(),
-            ChickenBreed::Buttercup => "Buttercup".to_string(),
-            ChickenBreed::Campine => "Campine".to_string(),
-            ChickenBreed::Catalana => "Catalana".to_string(),
-            ChickenBreed::Chantecler => "Chantecler".to_string(),
-            ChickenBreed::Cochin => "Cochin".to_string(),
-            ChickenBreed::Cornish => "Cornish".to_string(),
-            ChickenBreed::Crevecoeur => "Crevecoeur".to_string(),
-            ChickenBreed::Cubalaya => "Cubalaya".to_string(),
-            ChickenBreed::Delaware => "Delaware".to_string(),
-            ChickenBreed::Dominiques => "Dominiques".to_string(),
-            ChickenBreed::Dorking => "Dorking".to_string(),
-            ChickenBreed::DutchBantam => "Dutch Bantam".to_string(),
-            ChickenBreed::Faverolles => "Faverolles".to_string(),
-            ChickenBreed::Friesian => "Friesian".to_string(),
-            ChickenBreed::Frizzle => "Frizzle".to_string(),
-            ChickenBreed::Gimmizah => "Gimmizah".to_string(),
-            ChickenBreed::GoldenMontazah => "Golden Montazah".to_string(),
-            ChickenBreed::Hamburg => "Hamburg".to_string(),
-            ChickenBreed::Holland => "Holland".to_string(),
-            ChickenBreed::Houdan => "Houdan".to_string(),
-            ChickenBreed::Java => "Java".to_string(),
-            ChickenBreed::JerseyGiant => "Jersey Giant".to_string(),
-            ChickenBreed::LaFleche => "La Fleche".to_string(),
-            ChickenBreed::Lakenvelder => "Lakenvelder".to_string(),
-            ChickenBreed::Lamona => "Lamona".to_string(),
-            ChickenBreed::Langshan => "Langshan".to_string(),
-            ChickenBreed::Legbar => "Legbar".to_string(),
-            ChickenBreed::Leghorn => "Leghorn".to_string(),
-            ChickenBreed::Marans => "Marans".to_string(),
-            ChickenBreed::Malay => "Malay".to_string(),
-            ChickenBreed::Matrouh => "Matrouh".to_string(),
-            ChickenBreed::Minorca => "Minorca".to_string(),
-            ChickenBreed::ModernGame => "Modern Game".to_string(),
-            ChickenBreed::NakedNeck => "Naked Neck".to_string(),
-            ChickenBreed::Nankin => "Nankin".to_string(),
-            ChickenBreed::NewHampshireRed => "New Hampshire Red".to_string(),
-            ChickenBreed::OldEnglishGame => "Old English Game".to_string(),
-            ChickenBreed::Orpington => "Orpington".to_string(),
-            ChickenBreed::PlymouthRock => "Plymouth Rock".to_string(),
-            ChickenBreed::Polish => "Polish".to_string(),
-            ChickenBreed::RedCap => "Red Cap".to_string(),
-            ChickenBreed::RhodeIslandRed => "Rhode Island Red".to_string(),
-            ChickenBreed::RussianOrloff => "Russian Orloff".to_string(),
-            ChickenBreed::Sasso => "Sasso".to_string(),
-            ChickenBreed::Sebright => "Sebright".to_string(),
-            ChickenBreed::Shamo => "Shamo".to_string(),
-            ChickenBreed::SilkieBantam => "Silkie Bantam".to_string(),
-            ChickenBreed::SilverMontazah => "Silver Montazah".to_string(),
-            ChickenBreed::Styrian => "Styrian".to_string(),
-            ChickenBreed::Sultan => "Sultan".to_string(),
-            ChickenBreed::Sumatra => "Sumatra".to_string(),
-            ChickenBreed::Sussex => "Sussex".to_string(),
-            ChickenBreed::SwissHen => "Swiss Hen".to_string(),
-            ChickenBreed::Welsummer => "Welsummer".to_string(),
-            ChickenBreed::WhiteFacedBlackSpanish => "White Faced Black Spanish".to_string(),
-            ChickenBreed::Wyandotte => "Wyandotte".to_string(),
-            ChickenBreed::Yokohama => "Yokohama".to_string(),
-        }
+        format!("{:?}", self).to_title_case()
     }
 }
 
@@ -273,7 +202,7 @@ mod tests {
     fn test_to_string() {
         // we don't have any special cases, just test a few random ones
         let breeds = [
-            (ChickenBreed::AC, "AC"),
+            (ChickenBreed::AC, "Ac"),
             (ChickenBreed::Ameraucana, "Ameraucana"),
             (ChickenBreed::Ancona, "Ancona"),
             (ChickenBreed::Andalusian, "Andalusian"),

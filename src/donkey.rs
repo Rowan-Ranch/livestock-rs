@@ -1,3 +1,4 @@
+use inflector::Inflector;
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
 
@@ -35,16 +36,7 @@ impl ToString for DonkeyBreed {
     /// println!("{}", evenk.to_string());
     /// ```
     fn to_string(&self) -> String {
-        match self {
-            DonkeyBreed::Abyssinian => "Abyssinian".to_string(),
-            DonkeyBreed::Anatolia => "Anatolia".to_string(),
-            DonkeyBreed::LargeStandard => "Large Standard".to_string(),
-            DonkeyBreed::MammothJackStock => "Mammoth Jack Stock".to_string(),
-            DonkeyBreed::Mary => "Mary".to_string(),
-            DonkeyBreed::Miniature => "Miniature".to_string(),
-            DonkeyBreed::Poitou => "Poitou".to_string(),
-            DonkeyBreed::Standard => "Standard".to_string(),
-        }
+        format!("{:?}", self).to_title_case()
     }
 }
 
