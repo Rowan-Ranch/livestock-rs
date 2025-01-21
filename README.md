@@ -5,7 +5,7 @@
 A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
- - 🌱 Support for over 600+ livestock breeds, categorized by species.
+ - 🌱 Support for over 1,000+ livestock breeds, categorized by species.
  - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
@@ -14,6 +14,7 @@ Features
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
  - 🐪 Includes common camel breeds like Afar Dromedary and Somali Dromedary.
  - 🐓 Includes common chicken breeds like Orpington and Rhode Island Red.
+ - 🐎 Includes common horse breeds like Quarter, Racking, and Appaloosa horses.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
 
@@ -22,7 +23,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.8.0"
+livestock_rs = "0.9.0"
 ```
 
 or 
@@ -68,6 +69,10 @@ println!("{:?}", breed); // prints "Canindé"
 ## Chicken Breeds
 - Features a wide variety of chicken breeds including popular types like Rhode Island Red, Orpington, and Leghorn.
 - Regional specialties, including AC, Turken (Naked Neck), Yokohama, and more.
+
+## Horse Breeds
+- Features common varieties like Quarter, Racking, and Appaloosa horses.
+- Regional specialties, including Schwarzwälder Fuchs, Akhal-Teke, and more.
 
 ## Roadmap
  - 🗂️ Expand support for other livestock species (e.g., chickens, ducks, geese).
