@@ -261,7 +261,7 @@ pub enum SheepBreed {
     Zemmour,
     ZetaYellow,
     Zlatusha,
-    Zoulay
+    Zoulay,
 }
 
 impl ToString for SheepBreed {
@@ -332,7 +332,7 @@ impl FromStr for SheepBreed {
             "bavarian forest" => Ok(SheepBreed::BavarianForest),
             "bentheimer landschaf" => Ok(SheepBreed::BentheimerLandschaf),
             "bergamasca" => Ok(SheepBreed::Bergamasca),
-            "beulah speckled face" | "beulah speckle face"=> Ok(SheepBreed::BeulahSpeckledFace),
+            "beulah speckled face" | "beulah speckle face" => Ok(SheepBreed::BeulahSpeckledFace),
             "bibrik" => Ok(SheepBreed::Bibrik),
             "biellese" => Ok(SheepBreed::Biellese),
             "blackwelshmountain" => Ok(SheepBreed::BlackWelshMountain),
@@ -380,7 +380,9 @@ impl FromStr for SheepBreed {
             "derbyshire gritstone" => Ok(SheepBreed::DerbyshireGritstone),
             "dorper" => Ok(SheepBreed::Dorper),
             "devon closewool" => Ok(SheepBreed::DevonClosewool),
-            "deutsches blaukoepfiges fleischschaf" => Ok(SheepBreed::DeutschesBlaukoepfigesFleischschaf),
+            "deutsches blaukoepfiges fleischschaf" => {
+                Ok(SheepBreed::DeutschesBlaukoepfigesFleischschaf)
+            }
             "dorset down" => Ok(SheepBreed::DorsetDown),
             "dorset" => Ok(SheepBreed::Dorset),
             "drysdale" => Ok(SheepBreed::Drysdale),
@@ -417,7 +419,7 @@ impl FromStr for SheepBreed {
             "ile de france" => Ok(SheepBreed::IleDeFrance),
             "istrian pramenka" => Ok(SheepBreed::IstrianPramenka),
             "jacob" => Ok(SheepBreed::Jacob),
-            "jezersko solcava" | "jezersko solčava" => Ok(SheepBreed::JezerskoSolcava), 
+            "jezersko solcava" | "jezersko solčava" => Ok(SheepBreed::JezerskoSolcava),
             "kachhi" => Ok(SheepBreed::Kachhi),
             "kajli" => Ok(SheepBreed::Kajli),
             "karakul" => Ok(SheepBreed::Karakul),
@@ -503,7 +505,11 @@ impl FromStr for SheepBreed {
             "south wales mountain" => Ok(SheepBreed::SouthWalesMountain),
             "spaeslau" => Ok(SheepBreed::Spaeslau),
             "spiegel" => Ok(SheepBreed::Spiegel),
-            "st croix" | "virgin island white" | "st. croix (virgin island white)" | "st. croix" | "saint croix" => Ok(SheepBreed::StCroix),
+            "st croix"
+            | "virgin island white"
+            | "st. croix (virgin island white)"
+            | "st. croix"
+            | "saint croix" => Ok(SheepBreed::StCroix),
             "steigar" => Ok(SheepBreed::Steigar),
             "steinschaf" => Ok(SheepBreed::Steinschaf),
             "strong wool merino" => Ok(SheepBreed::StrongWoolMerino),
@@ -557,7 +563,10 @@ impl FromStr for SheepBreed {
             "zeta yellow" => Ok(SheepBreed::ZetaYellow),
             "zlatusha" => Ok(SheepBreed::Zlatusha),
             "zoulay" => Ok(SheepBreed::Zoulay),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Unknown sheep breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Unknown sheep breed",
+            )),
         }
     }
 }

@@ -85,7 +85,7 @@ pub enum ChickenBreed {
     Welsummer,
     WhiteFacedBlackSpanish,
     Wyandotte,
-    Yokohama
+    Yokohama,
 }
 
 impl ToString for ChickenBreed {
@@ -169,7 +169,9 @@ impl FromStr for ChickenBreed {
             "nankin" => Ok(ChickenBreed::Nankin),
             "new hampshire red" => Ok(ChickenBreed::NewHampshireRed),
             "old english game" => Ok(ChickenBreed::OldEnglishGame),
-            "orpington" | "buff orpington" | "lavender orpington" | "buff" => Ok(ChickenBreed::Orpington),
+            "orpington" | "buff orpington" | "lavender orpington" | "buff" => {
+                Ok(ChickenBreed::Orpington)
+            }
             "plymouth rock" => Ok(ChickenBreed::PlymouthRock),
             "polish" => Ok(ChickenBreed::Polish),
             "red cap" => Ok(ChickenBreed::RedCap),
@@ -189,7 +191,10 @@ impl FromStr for ChickenBreed {
             "white faced black spanish" => Ok(ChickenBreed::WhiteFacedBlackSpanish),
             "wyandotte" => Ok(ChickenBreed::Wyandotte),
             "yokohama" => Ok(ChickenBreed::Yokohama),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Unknown breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Unknown breed",
+            )),
         }
     }
 }
@@ -207,11 +212,14 @@ mod tests {
             (ChickenBreed::Ancona, "Ancona"),
             (ChickenBreed::Andalusian, "Andalusian"),
             (ChickenBreed::AppenzellBeardedHen, "Appenzell Bearded Hen"),
-            (ChickenBreed::AppenzellPointedHoodHen, "Appenzell Pointed Hood Hen"),
+            (
+                ChickenBreed::AppenzellPointedHoodHen,
+                "Appenzell Pointed Hood Hen",
+            ),
             (ChickenBreed::Araucana, "Araucana"),
             (ChickenBreed::Aseel, "Aseel"),
             (ChickenBreed::Australorp, "Australorp"),
-            (ChickenBreed::Baheij, "Baheij")
+            (ChickenBreed::Baheij, "Baheij"),
         ];
 
         for (breed, expected) in breeds.iter() {
@@ -231,10 +239,16 @@ mod tests {
             ("new hampshire red", ChickenBreed::NewHampshireRed),
             ("dutch bantam", ChickenBreed::DutchBantam),
             ("appenzell bearded hen", ChickenBreed::AppenzellBeardedHen),
-            ("appenzell pointed hood hen", ChickenBreed::AppenzellPointedHoodHen),
-            ("white faced black spanish", ChickenBreed::WhiteFacedBlackSpanish),
+            (
+                "appenzell pointed hood hen",
+                ChickenBreed::AppenzellPointedHoodHen,
+            ),
+            (
+                "white faced black spanish",
+                ChickenBreed::WhiteFacedBlackSpanish,
+            ),
             ("silver montazah", ChickenBreed::SilverMontazah),
-            ("golden montazah", ChickenBreed::GoldenMontazah)
+            ("golden montazah", ChickenBreed::GoldenMontazah),
         ];
 
         for (breed, expected) in breeds.iter() {

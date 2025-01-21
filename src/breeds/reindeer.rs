@@ -17,7 +17,7 @@ pub enum ReindeerBreed {
     Chukotka,
     Even,
     Evenk,
-    Nentsi
+    Nentsi,
 }
 
 impl ToString for ReindeerBreed {
@@ -59,7 +59,10 @@ impl FromStr for ReindeerBreed {
             "even" => Ok(ReindeerBreed::Even),
             "evenk" => Ok(ReindeerBreed::Evenk),
             "nentsi" => Ok(ReindeerBreed::Nentsi),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid reindeer breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid reindeer breed",
+            )),
         }
     }
 }

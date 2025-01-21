@@ -19,7 +19,7 @@ pub enum CamelBreed {
     AlxaBactrian,
     ArvanaDromedary,
     KalmykBactrian,
-    SomaliDromedary
+    SomaliDromedary,
 }
 
 impl ToString for CamelBreed {
@@ -57,7 +57,10 @@ impl FromStr for CamelBreed {
             "arvana dromedary" | "arvana" => Ok(CamelBreed::ArvanaDromedary),
             "kalmyk bactrian" | "kalmyk" => Ok(CamelBreed::KalmykBactrian),
             "somali dromedary" | "somali" => Ok(CamelBreed::SomaliDromedary),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid camel breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid camel breed",
+            )),
         }
     }
 }
