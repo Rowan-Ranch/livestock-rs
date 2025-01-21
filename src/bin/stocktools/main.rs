@@ -4,9 +4,13 @@ use clap::{Parser, Subcommand};
 mod adg;
 use adg::AdgSubcommand;
 
+mod fcr;
+use fcr::FcrSubcommand;
+
 #[derive(Subcommand, Debug)]
 enum Commands {
     Adg(AdgSubcommand),
+    Fcr(FcrSubcommand),
 }
 
 #[derive(Parser)]
@@ -28,5 +32,6 @@ fn main() -> Result<()> {
 
     match cli.command {
         Commands::Adg(subcommand) => subcommand.run(),
+        Commands::Fcr(subcommand) => subcommand.run(),
     }
 }
