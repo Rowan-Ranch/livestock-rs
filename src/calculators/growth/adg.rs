@@ -13,7 +13,7 @@ use anyhow::{ensure, Result};
 /// # Example
 /// ```
 /// use livestock_rs::calculators::growth::adg::calculate_adg;
-/// let adg = calculate_adg(100.0, 150.0, 50);
+/// let adg = calculate_adg(100.0, 150.0, 50).unwrap();
 /// assert_eq!(adg, 1.0); // 1 kg or lb per day
 /// ```
 pub fn calculate_adg(initial_weight: f64, final_weight: f64, days: usize) -> Result<f64> {
