@@ -422,7 +422,9 @@ impl FromStr for HorseBreed {
             "nooitgedacht" => Ok(HorseBreed::Nooitgedacht),
             "noric" => Ok(HorseBreed::Noric),
             "nordland" => Ok(HorseBreed::Nordland),
-            "northeastern crioulo" | "northeastern   crioulo" => Ok(HorseBreed::NortheasternCrioulo),
+            "northeastern crioulo" | "northeastern   crioulo" => {
+                Ok(HorseBreed::NortheasternCrioulo)
+            }
             "north swedish" => Ok(HorseBreed::NorthSwedish),
             "norwegian fjord" => Ok(HorseBreed::NorwegianFjord),
             "ob" => Ok(HorseBreed::Ob),
@@ -497,7 +499,10 @@ impl FromStr for HorseBreed {
             "yonaguni" => Ok(HorseBreed::Yonaguni),
             "zaniskari" => Ok(HorseBreed::Zaniskari),
             "zhemaichu" => Ok(HorseBreed::Zhemaichu),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid horse breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid horse breed",
+            )),
         }
     }
 }
@@ -546,7 +551,7 @@ mod tests {
             ("single-footing", HorseBreed::SingleFooting),
             ("spanish-norman", HorseBreed::SpanishNorman),
             ("sudan country-bred", HorseBreed::SudanCountryBred),
-            ("welsh pony & cob", HorseBreed::WelshPonyAndCob)
+            ("welsh pony & cob", HorseBreed::WelshPonyAndCob),
         ];
 
         for (breed, expected) in breeds.iter() {

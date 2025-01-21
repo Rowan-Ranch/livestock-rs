@@ -82,9 +82,8 @@ pub enum SwineBreed {
     VietnamesePotbelly,
     Welsh,
     Wuzhishan,
-    Yorkshire
+    Yorkshire,
 }
-
 
 impl ToString for SwineBreed {
     /// Converts the SwineBreed enum to a human readable string.
@@ -156,7 +155,7 @@ impl FromStr for SwineBreed {
             "kunekune" => Ok(SwineBreed::Kunekune),
             "lacombe" => Ok(SwineBreed::Lacombe),
             "large black" => Ok(SwineBreed::LargeBlack),
-            "large black-white" | "large black white"=> Ok(SwineBreed::LargeBlackWhite),
+            "large black-white" | "large black white" => Ok(SwineBreed::LargeBlackWhite),
             "large white" => Ok(SwineBreed::LargeWhite),
             "lithuanian" => Ok(SwineBreed::Lithuanian),
             "mangalitza" => Ok(SwineBreed::Mangalitza),
@@ -171,7 +170,9 @@ impl FromStr for SwineBreed {
             "ningxiang" => Ok(SwineBreed::Ningxiang),
             "norwegian landrace" => Ok(SwineBreed::NorwegianLandrace),
             "ossabaw island" => Ok(SwineBreed::OssabawIsland),
-            "oxford sandy and black" | "oxford sandy & black"=> Ok(SwineBreed::OxfordSandyAndBlack),
+            "oxford sandy and black" | "oxford sandy & black" => {
+                Ok(SwineBreed::OxfordSandyAndBlack)
+            }
             "philippine native" => Ok(SwineBreed::PhilippineNative),
             "pietrain" => Ok(SwineBreed::Pietrain),
             "poland china" => Ok(SwineBreed::PolandChina),
@@ -183,11 +184,16 @@ impl FromStr for SwineBreed {
             "thuoc nhieu" => Ok(SwineBreed::ThuocNhieu),
             "tibetan" => Ok(SwineBreed::Tibetan),
             "thuropolje" => Ok(SwineBreed::Thuropolje),
-            "vietnamese potbelly" | "potbelly" | "potbellied" | "vietnamese potbellied" => Ok(SwineBreed::VietnamesePotbelly),
+            "vietnamese potbelly" | "potbelly" | "potbellied" | "vietnamese potbellied" => {
+                Ok(SwineBreed::VietnamesePotbelly)
+            }
             "welsh" => Ok(SwineBreed::Welsh),
             "wuzhishan" => Ok(SwineBreed::Wuzhishan),
             "yorkshire" => Ok(SwineBreed::Yorkshire),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid reindeer breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid reindeer breed",
+            )),
         }
     }
 }
@@ -225,10 +231,13 @@ mod tests {
             (SwineBreed::FinnishLandrace, "Finnish Landrace"),
             (SwineBreed::FrenchLandrace, "French Landrace"),
             (SwineBreed::GermanLandrace, "German Landrace"),
-            (SwineBreed::GloucestershireOldSpot, "Gloucestershire Old Spot"),
+            (
+                SwineBreed::GloucestershireOldSpot,
+                "Gloucestershire Old Spot",
+            ),
             (SwineBreed::GuineaHog, "Guinea Hog"),
             (SwineBreed::Hampshire, "Hampshire"),
-            (SwineBreed::Hereford, "Hereford")
+            (SwineBreed::Hereford, "Hereford"),
         ];
 
         for (breed, expected) in breeds.iter() {
@@ -238,8 +247,8 @@ mod tests {
 
     #[test]
     fn test_from_str() {
-       // We don't have many special cases, just test a few.
-       let breeds = [
+        // We don't have many special cases, just test a few.
+        let breeds = [
             ("american landrace", SwineBreed::AmericanLandrace),
             ("american yorkshire", SwineBreed::AmericanYorkshire),
             ("angeln saddleback", SwineBreed::AngelnSaddleback),
@@ -252,11 +261,11 @@ mod tests {
             ("oxford sandy and black", SwineBreed::OxfordSandyAndBlack),
             ("oxford sandy & black", SwineBreed::OxfordSandyAndBlack),
             ("large black-white", SwineBreed::LargeBlackWhite),
-            ("large black white", SwineBreed::LargeBlackWhite)
-       ];
+            ("large black white", SwineBreed::LargeBlackWhite),
+        ];
 
-         for (breed, expected) in breeds.iter() {
-              assert_eq!(SwineBreed::from_str(*breed).unwrap(), *expected);
-         }
+        for (breed, expected) in breeds.iter() {
+            assert_eq!(SwineBreed::from_str(*breed).unwrap(), *expected);
+        }
     }
 }

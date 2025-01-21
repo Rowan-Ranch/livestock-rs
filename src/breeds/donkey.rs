@@ -22,7 +22,7 @@ pub enum DonkeyBreed {
     Mary,
     Miniature,
     Poitou,
-    Standard
+    Standard,
 }
 
 impl ToString for DonkeyBreed {
@@ -63,7 +63,10 @@ impl FromStr for DonkeyBreed {
             "miniature" | "mini" => Ok(DonkeyBreed::Miniature),
             "poitou" => Ok(DonkeyBreed::Poitou),
             "standard" => Ok(DonkeyBreed::Standard),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid reindeer breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid reindeer breed",
+            )),
         }
     }
 }
@@ -101,7 +104,7 @@ mod tests {
             ("miniature", DonkeyBreed::Miniature),
             ("mini", DonkeyBreed::Miniature),
             ("poitou", DonkeyBreed::Poitou),
-            ("standard", DonkeyBreed::Standard)
+            ("standard", DonkeyBreed::Standard),
         ];
 
         for (breed, expected) in breeds.iter() {

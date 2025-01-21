@@ -2,10 +2,11 @@
 
 ![crates.io](https://img.shields.io/crates/v/livestock-rs.svg)
 
-A comprehensive library for managing, identifying, and working with livestock breeds. Designed to support farming and ranching applications, breed registries, and livestock data processing.
+A comprehensive library and CLI tool for managing, identifying, and working with livestock breeds, growth rates, and health. Designed to support farming and ranching applications, breed registries, and livestock data processing.
 
 Features
  - 🌱 Support for over 1,000+ livestock breeds, categorized by species.
+ - 📊 Provides calculators for growth metrics like Average Daily Gain (ADG).
  - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
@@ -23,7 +24,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.9.2"
+livestock_rs = "0.10.0"
 ```
 
 or 
@@ -32,7 +33,13 @@ or
 cargo add livestock-rs
 ```
 
-## Usage Example
+## ADG Usage Example
+``` rust
+use livestock_rs::calculators::growth::adg::calculate_adg;
+let adg = calculate_adg(100.0, 150.0, 50);
+```
+
+## Breed Usage Example
 ``` rust
 use livestock_rs::breeds::GoatBreed;
 

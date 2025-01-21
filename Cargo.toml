@@ -1,10 +1,10 @@
 [package]
 name = "livestock-rs"
-version = "0.9.2"
+version = "0.10.0"
 edition = "2021"
 authors = ["Jaken Herman <jaken@rowanranch.com>"]
 license = "MIT"
-description = "A library for managing and identifying livestock breeds."
+description = "A comprehensive library and CLI tool for managing, identifying, and working with livestock breeds, growth rates, and health. Designed to support farming and ranching applications, breed registries, and livestock data processing."
 repository = "https://github.com/rowan-ranch/livestock-rs"
 keywords = ["livestock", "farming", "ranching", "agriculture", "agritech"]
 categories = ["data-structures"]
@@ -13,6 +13,8 @@ publish = true
 
 [dependencies]
 Inflector = "0.11.4"
+anyhow = "1.0.95"
+clap = { version = "~4.1", features = ["derive", "cargo", "env", "wrap_help"] }
 serde = { version = "1.0.217", features=["derive"] }
 
 [badges]

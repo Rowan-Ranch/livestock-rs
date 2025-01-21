@@ -1,6 +1,6 @@
+use inflector::Inflector;
 use serde::{Deserialize, Serialize};
 use std::str::FromStr;
-use inflector::Inflector;
 
 /// An enum representing the different breeds of cattle.
 ///
@@ -387,7 +387,14 @@ impl FromStr for CattleBreed {
             "bhagnari" => Ok(CattleBreed::Bhagnari),
             "black hereford" => Ok(CattleBreed::BlackHereford),
             "blacksided trondheim and norland" => Ok(CattleBreed::BlacksidedTrondheimAndNorland),
-            "blanca cacerena" | "blanca cacereña" | "white cáceres" | "white caceres" | "blanca cacerena/white caceres" | "blanca cacereña/white cáceres" | "blanca cacerena/white cáceres" | "blanca cacereña/white caceres" => Ok(CattleBreed::BlancaCacerena),
+            "blanca cacerena"
+            | "blanca cacereña"
+            | "white cáceres"
+            | "white caceres"
+            | "blanca cacerena/white caceres"
+            | "blanca cacereña/white cáceres"
+            | "blanca cacerena/white cáceres"
+            | "blanca cacereña/white caceres" => Ok(CattleBreed::BlancaCacerena),
             "blanco orejinegro" => Ok(CattleBreed::BlancoOrejinegro),
             "blonde d'aquitaine" => Ok(CattleBreed::BlondeDAquitaine),
             "bonsmara" => Ok(CattleBreed::Bonsmara),
@@ -432,7 +439,11 @@ impl FromStr for CattleBreed {
             "dolafe" | "dølafe" => Ok(CattleBreed::Dolafe),
             "droughtmaster" => Ok(CattleBreed::Droughtmaster),
             "dulong" => Ok(CattleBreed::Dulong),
-            "dutch belted" | "lakenvelder" | "dutch belted (lakenvelder)" | "dutch belted/lakenvelder" | "lakenvelder/dutch belted" => Ok(CattleBreed::DutchBelted),
+            "dutch belted"
+            | "lakenvelder"
+            | "dutch belted (lakenvelder)"
+            | "dutch belted/lakenvelder"
+            | "lakenvelder/dutch belted" => Ok(CattleBreed::DutchBelted),
             "dutch friesian" => Ok(CattleBreed::DutchFriesian),
             "east anatolian red" => Ok(CattleBreed::EastAnatolianRed),
             "enderby island" => Ok(CattleBreed::EnderbyIsland),
@@ -499,7 +510,9 @@ impl FromStr for CattleBreed {
             "krishna valley" => Ok(CattleBreed::KrishnaValley),
             "kurdi black" => Ok(CattleBreed::KurdiBlack),
             "kuri" => Ok(CattleBreed::Kuri),
-            "latvian brown" | "buraya latviiskaya" | "latvian brown (buraya latviiskaya)" => Ok(CattleBreed::LatvianBrown),
+            "latvian brown" | "buraya latviiskaya" | "latvian brown (buraya latviiskaya)" => {
+                Ok(CattleBreed::LatvianBrown)
+            }
             "limousin" => Ok(CattleBreed::Limousin),
             "limpurger" => Ok(CattleBreed::Limpurger),
             "lincoln red" => Ok(CattleBreed::LincolnRed),
@@ -528,7 +541,9 @@ impl FromStr for CattleBreed {
             "morucha" => Ok(CattleBreed::Morucha),
             "murboden" => Ok(CattleBreed::Murboden),
             "murray grey" => Ok(CattleBreed::MurrayGrey),
-            "muturu" | "west african dwarf shorthorn" | "muturu   west african dwarf shorthorn" => Ok(CattleBreed::Muturu),
+            "muturu" | "west african dwarf shorthorn" | "muturu   west african dwarf shorthorn" => {
+                Ok(CattleBreed::Muturu)
+            }
             "ndama" | "n'dama" => Ok(CattleBreed::Ndama),
             "nagori" => Ok(CattleBreed::Nagori),
             "nanyang" => Ok(CattleBreed::Nanyang),
@@ -609,7 +624,10 @@ impl FromStr for CattleBreed {
             "welsh black" => Ok(CattleBreed::WelshBlack),
             "white park" => Ok(CattleBreed::WhitePark),
             "yanbian" => Ok(CattleBreed::Yanbian),
-            _ => Err(std::io::Error::new(std::io::ErrorKind::InvalidInput, "Invalid cattle breed")),
+            _ => Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "Invalid cattle breed",
+            )),
         }
     }
 }
@@ -630,7 +648,10 @@ mod tests {
             (CattleBreed::DutchBelted, "Dutch Belted (Lakenvelder)"),
             (CattleBreed::HolandoArgentino, "Holando-Argentino"),
             (CattleBreed::IndoBrazilian, "Indo-Brazilian"),
-            (CattleBreed::LatvianBrown, "Latvian Brown (Buraya Latviiskaya)"),
+            (
+                CattleBreed::LatvianBrown,
+                "Latvian Brown (Buraya Latviiskaya)",
+            ),
             (CattleBreed::MaineAnjou, "Maine-Anjou"),
             (CattleBreed::MeuseRhineYssel, "Meuse-Rhine-Yssel"),
             (CattleBreed::Montbeliard, "Montbéliarde"),
@@ -658,7 +679,10 @@ mod tests {
             ("Dutch Belted (Lakenvelder)", CattleBreed::DutchBelted),
             ("Holando-Argentino", CattleBreed::HolandoArgentino),
             ("Indo-Brazilian", CattleBreed::IndoBrazilian),
-            ("Latvian Brown (Buraya Latviiskaya)", CattleBreed::LatvianBrown),
+            (
+                "Latvian Brown (Buraya Latviiskaya)",
+                CattleBreed::LatvianBrown,
+            ),
             ("Maine-Anjou", CattleBreed::MaineAnjou),
             ("Meuse-Rhine-Yssel", CattleBreed::MeuseRhineYssel),
             ("Montbéliard", CattleBreed::Montbeliard),
