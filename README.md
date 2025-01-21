@@ -13,6 +13,7 @@ Features
  - 🫏 Includes common donkey breeds like Miniature and Standard.
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
  - 🐪 Includes common camel breeds like Afar Dromedary and Somali Dromedary.
+ - 🐓 Includes common chicken breeds like Orpington and Rhode Island Red.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
 
@@ -21,7 +22,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.7.0"
+livestock_rs = "0.8.0"
 ```
 
 or 
@@ -63,6 +64,10 @@ println!("{:?}", breed); // prints "Canindé"
 ## Camel Breeds
 - Features common varieties of camel breeds like Afar Dromedary and Somali Dromedary.
 - Regional specialties, including Kalmyk Bactrian and more.
+
+## Chicken Breeds
+- Features a wide variety of chicken breeds including popular types like Rhode Island Red, Orpington, and Leghorn.
+- Regional specialties, including AC, Turken (Naked Neck), Yokohama, and more.
 
 ## Roadmap
  - 🗂️ Expand support for other livestock species (e.g., chickens, ducks, geese).
