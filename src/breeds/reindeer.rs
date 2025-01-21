@@ -7,7 +7,7 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::reindeer::ReindeerBreed;
+/// use livestock_rs::breeds::reindeer::ReindeerBreed;
 ///
 /// let breed = ReindeerBreed::Chukotka;
 /// println!("{:?}", breed);
@@ -25,7 +25,7 @@ impl ToString for ReindeerBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock_rs::reindeer::ReindeerBreed;
+    /// use livestock_rs::breeds::reindeer::ReindeerBreed;
     ///
     /// let evenk = ReindeerBreed::Evenk;
     /// println!("{}", evenk.to_string());
@@ -44,7 +44,7 @@ impl ToString for ReindeerBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::reindeer::ReindeerBreed;
+/// use livestock_rs::breeds::reindeer::ReindeerBreed;
 /// use std::str::FromStr;
 ///
 /// let breed = ReindeerBreed::from_str("evenk").unwrap();

@@ -8,7 +8,7 @@ use std::str::FromStr;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::camel::CamelBreed;
+/// use livestock_rs::breeds::camel::CamelBreed;
 ///
 /// let breed = CamelBreed::AfarDromedary;
 /// println!("{:?}", breed);
@@ -27,7 +27,7 @@ impl ToString for CamelBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock_rs::camel::CamelBreed;
+    /// use livestock_rs::breeds::camel::CamelBreed;
     ///
     /// let alxa = CamelBreed::AlxaBactrian;
     /// println!("{}", alxa.to_string());
@@ -41,7 +41,7 @@ impl ToString for CamelBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::camel::CamelBreed;
+/// use livestock_rs::breeds::camel::CamelBreed;
 /// use std::str::FromStr;
 ///
 /// let breed = CamelBreed::from_str("Somali Dromedary").unwrap();

@@ -8,7 +8,7 @@ use inflector::Inflector;
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::cattle::CattleBreed;
+/// use livestock_rs::breeds::cattle::CattleBreed;
 ///
 /// let breed = CattleBreed::Angus;
 /// println!("{:?}", breed);
@@ -293,7 +293,7 @@ impl ToString for CattleBreed {
     ///
     /// # Examples
     /// ``` rust
-    /// use livestock_rs::cattle::CattleBreed;
+    /// use livestock_rs::breeds::cattle::CattleBreed;
     ///
     /// let angus = CattleBreed::Angus;
     /// println!("{}", angus.to_string());
@@ -327,7 +327,7 @@ impl ToString for CattleBreed {
 ///
 /// # Examples
 /// ``` rust
-/// use livestock_rs::cattle::CattleBreed;
+/// use livestock_rs::breeds::cattle::CattleBreed;
 /// use std::str::FromStr;
 ///
 /// let breed = CattleBreed::from_str("angus").unwrap();

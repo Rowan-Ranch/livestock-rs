@@ -34,7 +34,7 @@ cargo add livestock-rs
 
 ## Usage Example
 ``` rust
-use livestock_rs::GoatBreed;
+use livestock_rs::breeds::GoatBreed;
 
 let breed = GoatBreed::Caninde;
 println!("{:?}", breed); // prints "Canindé"
