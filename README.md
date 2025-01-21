@@ -12,6 +12,7 @@ Features
  - 🐖 Includes common swine breeds like Duroc and Hampshire.
  - 🫏 Includes common donkey breeds like Miniature and Standard.
  - 🦌 Includes common reindeer breeds like Even and Nentsi.
+ - 🐪 Includes common camel breeds like Afar Dromedary and Somali Dromedary.
  - 🛠️ Utilities for converting between enum variants and human-readable strings.
  - 🔒 Serde support for serialization and deserialization.
 
@@ -20,7 +21,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.6.1"
+livestock_rs = "0.7.0"
 ```
 
 or 
@@ -59,8 +60,12 @@ println!("{:?}", breed); // prints "Canindé"
 ## Reindeer Breeds
  - Features common reindeer breeds including Chukotka, Even, Evenk, and Nentsi.
 
+## Camel Breeds
+- Features common varieties of camel breeds like Afar Dromedary and Somali Dromedary.
+- Regional specialties, including Kalmyk Bactrian and more.
+
 ## Roadmap
- - 🗂️ Expand support for other livestock species (e.g., chickens, ducks, pigs).
+ - 🗂️ Expand support for other livestock species (e.g., chickens, ducks, geese).
  - 🌍 Localization support for breed names in multiple languages.
  - 📊 Add more utilities for livestock data management.
 
