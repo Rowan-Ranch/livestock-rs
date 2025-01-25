@@ -29,7 +29,7 @@ use livestock_rs::calculators::growth::adg::calculate_adg;
         Calculate the ADG for an animal that starts at 100 kg and ends at 150 kg over 50 days:
 
         ```
-        livestock adg -i 100 -f 150 -d 50
+        stocktools adg -i 100 -f 150 -d 50
         ```
 
         The result will be `1.0`, which means the animal gained 1 kg per day.        

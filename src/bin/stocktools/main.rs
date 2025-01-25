@@ -4,9 +4,17 @@ use clap::{Parser, Subcommand};
 mod adg;
 use adg::AdgSubcommand;
 
+mod efficiency;
+use efficiency::FeedEfficiencySubcommand;
+
+mod fcr;
+use fcr::FcrSubcommand;
+
 #[derive(Subcommand, Debug)]
 enum Commands {
     Adg(AdgSubcommand),
+    Fcr(FcrSubcommand),
+    FeedEfficiency(FeedEfficiencySubcommand),
 }
 
 #[derive(Parser)]
@@ -28,5 +36,7 @@ fn main() -> Result<()> {
 
     match cli.command {
         Commands::Adg(subcommand) => subcommand.run(),
+        Commands::Fcr(subcommand) => subcommand.run(),
+        Commands::FeedEfficiency(subcommand) => subcommand.run(),
     }
 }

@@ -6,7 +6,7 @@ A comprehensive library and CLI tool for managing, identifying, and working with
 
 Features
  - 🌱 Support for over 1,000+ livestock breeds, categorized by species.
- - 📊 Provides calculators for growth metrics like Average Daily Gain (ADG).
+ - 📊 Provides calculators for growth metrics like Average Daily Gain (ADG) and Feed Conversion Ration (FCR).
  - 🐄 Includes common cattle breeds like Angus and Brahman.
  - 🐐 Includes common goat breeds like Alpine and Boer.
  - 🐑 Includes common sheep breeds like Dorper and St. Croix.
@@ -24,7 +24,7 @@ Add the crate to your `Cargo.toml`:
 
 ```
 [dependencies]
-livestock_rs = "0.10.0"
+livestock_rs = "0.12.0"
 ```
 
 or 
@@ -37,6 +37,31 @@ cargo add livestock-rs
 ``` rust
 use livestock_rs::calculators::growth::adg::calculate_adg;
 let adg = calculate_adg(100.0, 150.0, 50);
+```
+
+For CLI, use
+```
+stocktools adg -i 100 -f 150 -d 50
+```
+
+## FCR & Feed Efficiency Rating Usage Example
+``` rust
+use livestock_rs::calculators::feed::fcr::calculate_fcr;
+use livestock_rs::calculators::feed::efficiency::{calculate_feed_efficiency, FeedEfficiency, FeedEfficiencyRating};
+use livestock_rs::types::LivestockType;
+
+let fcr = calculate_fcr(100.0, 30.0); // FCR = 3.33
+let feed_efficiency = calculate_feed_efficiency(fcr, LivestockType::Swine)?; // Swine should be from 3.0 - 3.9
+
+// feed_efficiency.rating = FeedEfficiencyRating::Average
+// feed_efficiency.fcr = 3.33
+// feed_efficiency.min_fcr = 3.0
+// feed_efficiency.max_fcr = 3.9
+```
+
+For CLI, use
+```
+stocktools fcr -i 100 -g 300
 ```
 
 ## Breed Usage Example
